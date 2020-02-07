@@ -28,3 +28,10 @@ def checkcol(main, n):
             latin = False
             break
     return latin
+
+
+def checker(main, n):
+    if checkcol(main, n) and checkrow(main, n):
+        print('Yes')
+    else:
+        print('No')
