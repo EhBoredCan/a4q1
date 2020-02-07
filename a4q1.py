@@ -1,7 +1,8 @@
 #  Jesse Selin jps496 11223887 CMPT145-02-L10
 
-def checkrow(main, n):
+def checkrow(main):
     latin = True
+    n = len(main)
     for row in main:
         check = [True] * n
         for value in row:
@@ -15,8 +16,9 @@ def checkrow(main, n):
     return latin
 
 
-def checkcol(main, n):
+def checkcol(main):
     latin = True
+    n = len(main)
     for column in range(len(main)):
         check = [True] * n
         for row in range(n):
@@ -30,8 +32,8 @@ def checkcol(main, n):
     return latin
 
 
-def checker(main, n):
-    if checkcol(main, n) and checkrow(main, n):
+def checker(main):
+    if checkcol(main) and checkrow(main):
         print('Yes')
     else:
         print('No')
