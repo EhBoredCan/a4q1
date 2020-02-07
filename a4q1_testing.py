@@ -50,4 +50,49 @@ result = a1.checkrow(test,5)
 if result != False:
     print(reason, 'should return False returned', result)
 
+
+# Tests for checkcol
+
+test = [[1, 2, 3], [2, 3, 1], [3, 1, 2]]
+reason = 'Three N = 3 size sublists with correct row values'
+result = a1.checkcol(test,3)
+if result != True:
+    print(reason, 'should return True returned', result)
+
+test = [[1]]
+reason = 'A list of 1'
+result = a1.checkcol(test,1)
+if result != True:
+    print(reason, 'should return True returned', result)
+
+test = [[1, 4, 3], [2, 3, 2], [3, 2, 1]]
+reason = 'Incorrect second column'
+result = a1.checkcol(test,3)
+if result != False:
+    print(reason, 'should return False returned', result)
+
+test = [[4, 2, 1], [1, 3, 3], [2, 1, 2]]
+reason = 'Incorrect first column'
+result = a1.checkcol(test,3)
+if result != False:
+    print(reason, 'should return False returned', result)
+
+test = [[1, 2, 3], [3, 1, 1], [2, 3, 4]]
+reason = 'Incorrect last column'
+result = a1.checkcol(test,3)
+if result != False:
+    print(reason, 'should return False returned', result)
+
+test = [[]]
+reason = 'An empty sublist, latin squares are not empty'
+result = a1.checkcol(test,1)
+if result != False:
+    print(reason, 'should return True returned', result)
+
+test = [[1, 2, 4, 4, 5], [2, 3, 1, 5, 4], [3, 4, 2, 2, 3], [4, 1, 3, 3, 2], [5, 5, 5, 1, -1]]
+reason = 'last column contains a negative'
+result = a1.checkcol(test,5)
+if result != False:
+    print(reason, 'should return False returned', result)
+
 print('Tests Complete')
