@@ -95,4 +95,37 @@ result = a1.checkcol(test,5)
 if result != False:
     print(reason, 'should return False returned', result)
 
+
+# Tests for Checker
+
+test = [[1, 2, 3], [2, 3, 1], [3, 1, 2]]
+reason = 'Correct Latin Square'
+# a1.checker(test,3)
+# Visual Inspection: Should print Yes
+# Correct output
+
+test = [[1, 2, 3, 4, 5], [2, 3, 4, 5, 1], [3, 4, 5, 1, 2], [4, 5, 1, 2, 3], [5, 1, 2, 3, 4]]
+reason = 'Correct Latin Square'
+# a1.checker(test,5)
+# Visual Inspection: Should print Yes
+# Correct output
+
+test = [[], [], [], [], []]
+reason = 'Incorrect Latin Square, list of empty lists'
+# a1.checker(test,5)
+# Visual Inspection: Should print No
+# Correct output
+
+test = [[1, 2, 3, 4, 5], [2, 3, 4, 5, 1], [3, 4, 5, 1, 2], [4, 5, 1, 2, 3], [5, 1, 2, 3, -4]]
+reason = 'Incorrect Latin Square, last value is negative'
+# a1.checker(test,5)
+# Visual Inspection: Should print No
+# Correct output
+
+test = [[1, 2, 3, 4, 5], [2, 3, 4, 5, 1], [3, 4, 6, 1, 2], [4, 5, 1, 2, 3], [5, 1, 2, 3, 4]]
+reason = 'Incorrect Latin Square, middle value is wrong (value > n)'
+# a1.checker(test,5)
+# Visual Inspection: Should print No
+# Correct output
+
 print('Tests Complete')
