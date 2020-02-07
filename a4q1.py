@@ -8,7 +8,22 @@ def checkrow(main, n):
             if value > n or value <= 0:
                 latin = False
                 break
-            check[value-1] = False
+            check[value - 1] = False
+        if True in check:
+            latin = False
+            break
+    return latin
+
+
+def checkcol(main, n):
+    latin = True
+    for row in range(len(main)):
+        check = [True] * n
+        for column in range(n):
+            if main[row][column] > n or main[row][column] <= 0:
+                latin = False
+                break
+            check[main[row][column]] = False
         if True in check:
             latin = False
             break
