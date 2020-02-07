@@ -35,3 +35,23 @@ def checker(main, n):
         print('Yes')
     else:
         print('No')
+
+
+def read(filename):
+    file = open(filename, 'r')
+    unorganizedvalues = [x.split() for x in file]
+    n = int(unorganizedvalues[0][0])
+    main = []
+    row = 1
+    while row < n + 1:
+        sublist = []
+        for value in range(n):
+            sublist.append(int(unorganizedvalues[row][value]))
+        main.append(sublist)
+        row += 1
+    return main
+
+
+def ask():
+    value = str(input('Please enter a filename for your Latin Square test:'))
+    return value
