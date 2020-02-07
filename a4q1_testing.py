@@ -147,4 +147,23 @@ reason = 'Check value for large square for non-Latin Square'
 # Visual Inspection: Should print No
 # Correct output
 
+# Test entire script for latin square.
+# Manual Testing
+
+# Test for no_100.3.txt
+# Result = No
+# Correct
+
+# Test for yes.10.2.txt
+# Result = Yes
+# Correct
+
+# Test for no_3.4.txt
+# Result = No
+# Correct
+
+# Test for yes_50.1.txt
+# Result = Yes
+# Correct
+
 print('Test Complete')

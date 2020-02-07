@@ -57,3 +57,6 @@ def read(filename):
 def ask():
     value = str(input('Please enter a filename for your Latin Square test:'))
     return value
+
+filename = ask()
+checker(read(filename))
