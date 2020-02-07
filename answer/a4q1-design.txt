@@ -1,0 +1,56 @@
+Jesse Selin jps496 11223887 jps496 CMPT145-02-L10
+
+Design:
+Inital Ideas:
+Latin Square as a list of lists. 
+Square = [[]1,[]2,...[]N], len(Main) = N
+Row = [#1, #2, ..., #N], len(Row) = N
+Check rows and columns (not diagonals).
+Easy to iterate over rows/columns.
+Order does not matter.
+Compare with [True]*N where each number in col/row sets slice false (sieve of something-esque).
+Check this list to see if it contains any True values, if True not a Latin square.
+
+def_checkrow(Main):
+Purpose: To check each row in the list of lists to see if its a latin square.
+Pre-conditions: A list of lists with N sublists of N length.
+Return: True if Latin SQ, False otherwise.
+- take a list of lists
+- iterate through each sublist checking with [True]*N
+- if [] have any True value then False, otherwise True
+
+def_checkcol(Main):
+Purpose: To check each column in the list of lists to see if its a latin square.
+Pre-conditions: A list of lists with N sublists of N length.
+Return: True if Latin SQ, False otherwise.
+- take a list of lists
+- iterate through each column checking with [True]*N in loop
+   - requires each slice of row at same value for every sublist
+- if [] have any True value then False, otherwise True
+
+def_checker(Main):
+Purpose: To check the square is a latin square with checkrow/checkcol.
+Pre-conditions: A list of lists with N sublists of N length. Function checkrow and checkcol.
+Post-conditons: Return values from checkrow and checkcol.
+Return: Prints Yes if Latin SQ, No if not.
+- use subfunctions to check and print result
+
+def_open(filename):
+Purpose: To open the file with the filename
+Pre-conditions: A filename as a string
+Post-conditons: File is read and creates a list of lists.
+Return: A list of lists with N sublists of N length.
+- open, strip, split
+- set sublists
+- append into main list
+
+def_ask(filename):
+Purpose: Asks for the name of a file from console using input.
+Pre-conditions: The filename is written correctly.
+Post-conditons: The filename is a string.
+Return: A filename set as a string.
+- ask for input
+- make sure input is a string 
+
+
+

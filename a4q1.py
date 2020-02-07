@@ -5,7 +5,10 @@ def checkrow(main, n):
     for row in main:
         check = [True] * n
         for value in row:
-            check[value] = False
+            if value > n or value <= 0:
+                latin = False
+                break
+            check[value-1] = False
         if True in check:
             latin = False
             break
