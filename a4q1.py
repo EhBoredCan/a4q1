@@ -17,13 +17,13 @@ def checkrow(main, n):
 
 def checkcol(main, n):
     latin = True
-    for row in range(len(main)):
+    for column in range(len(main)):
         check = [True] * n
-        for column in range(n):
-            if main[row][column] > n or main[row][column] <= 0:
+        for row in range(n):
+            if main[row] == [] or main[column][row] > n or main[row][column] <= 0:
                 latin = False
                 break
-            check[main[row][column]] = False
+            check[main[row][column] - 1] = False
         if True in check:
             latin = False
             break

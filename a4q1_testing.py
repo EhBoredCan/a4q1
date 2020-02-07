@@ -42,7 +42,7 @@ test = [[]]
 reason = 'An empty sublist, latin squares are not empty'
 result = a1.checkrow(test,1)
 if result != False:
-    print(reason, 'should return True returned', result)
+    print(reason, 'should return False returned', result)
 
 test = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [5, 4, 3, 2, 1], [1, 2, 3, 4, 5], [5, 3, 4, -2, 1]]
 reason = 'Middle sublist reversed values and end of list contains a negative and is randomly oriented'
@@ -87,7 +87,7 @@ test = [[]]
 reason = 'An empty sublist, latin squares are not empty'
 result = a1.checkcol(test,1)
 if result != False:
-    print(reason, 'should return True returned', result)
+    print(reason, 'should return False returned', result)
 
 test = [[1, 2, 4, 4, 5], [2, 3, 1, 5, 4], [3, 4, 2, 2, 3], [4, 1, 3, 3, 2], [5, 5, 5, 1, -1]]
 reason = 'last column contains a negative'
